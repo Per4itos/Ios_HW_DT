@@ -7,113 +7,119 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7BAF2F92A949C9300B4E60E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF2F82A949C9300B4E60E /* AppDelegate.swift */; };
-		E7BAF2FB2A949C9300B4E60E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF2FA2A949C9300B4E60E /* SceneDelegate.swift */; };
-		E7BAF2FD2A949C9300B4E60E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF2FC2A949C9300B4E60E /* ViewController.swift */; };
-		E7BAF3002A949C9300B4E60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BAF2FE2A949C9300B4E60E /* Main.storyboard */; };
-		E7BAF3022A949C9400B4E60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BAF3012A949C9400B4E60E /* Assets.xcassets */; };
-		E7BAF3052A949C9400B4E60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BAF3032A949C9400B4E60E /* LaunchScreen.storyboard */; };
-		E7BAF3122A94A05900B4E60E /* JokesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF3112A94A05900B4E60E /* JokesTableViewController.swift */; };
-		E7BAF3152A94A16500B4E60E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E7BAF3142A94A16500B4E60E /* Realm */; };
-		E7BAF3172A94A16500B4E60E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7BAF3162A94A16500B4E60E /* RealmSwift */; };
+		E73ACF6F2A95FA4F0038E3FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E73ACF6E2A95FA4F0038E3FF /* Realm */; };
+		E73ACF712A95FA4F0038E3FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E73ACF702A95FA4F0038E3FF /* RealmSwift */; };
+		E73ACF772A95FB1B0038E3FF /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73ACF762A95FB1B0038E3FF /* RealmService.swift */; };
+		E73ACF7B2A9600050038E3FF /* JokesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73ACF7A2A9600050038E3FF /* JokesTableViewCell.swift */; };
+		E7BAF3252A94A43500B4E60E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF3242A94A43500B4E60E /* AppDelegate.swift */; };
+		E7BAF3272A94A43500B4E60E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF3262A94A43500B4E60E /* SceneDelegate.swift */; };
+		E7BAF3292A94A43500B4E60E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF3282A94A43500B4E60E /* ViewController.swift */; };
+		E7BAF32C2A94A43500B4E60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BAF32A2A94A43500B4E60E /* Main.storyboard */; };
+		E7BAF32E2A94A43700B4E60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BAF32D2A94A43700B4E60E /* Assets.xcassets */; };
+		E7BAF3312A94A43700B4E60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BAF32F2A94A43700B4E60E /* LaunchScreen.storyboard */; };
+		E7BAF3392A94A64D00B4E60E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF3382A94A64D00B4E60E /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E7BAF2F52A949C9300B4E60E /* RealmJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7BAF2F82A949C9300B4E60E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7BAF2FA2A949C9300B4E60E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E7BAF2FC2A949C9300B4E60E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E7BAF2FF2A949C9300B4E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E7BAF3012A949C9400B4E60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E7BAF3042A949C9400B4E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E7BAF3062A949C9400B4E60E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7BAF3112A94A05900B4E60E /* JokesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesTableViewController.swift; sourceTree = "<group>"; };
+		E73ACF762A95FB1B0038E3FF /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		E73ACF7A2A9600050038E3FF /* JokesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesTableViewCell.swift; sourceTree = "<group>"; };
+		E7BAF3212A94A43500B4E60E /* ChuckNorisJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorisJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BAF3242A94A43500B4E60E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7BAF3262A94A43500B4E60E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E7BAF3282A94A43500B4E60E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7BAF32B2A94A43500B4E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7BAF32D2A94A43700B4E60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7BAF3302A94A43700B4E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7BAF3322A94A43700B4E60E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7BAF3382A94A64D00B4E60E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E7BAF2F22A949C9300B4E60E /* Frameworks */ = {
+		E7BAF31E2A94A43500B4E60E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7BAF3172A94A16500B4E60E /* RealmSwift in Frameworks */,
-				E7BAF3152A94A16500B4E60E /* Realm in Frameworks */,
+				E73ACF712A95FA4F0038E3FF /* RealmSwift in Frameworks */,
+				E73ACF6F2A95FA4F0038E3FF /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E7BAF2EC2A949C9300B4E60E = {
+		E7BAF3182A94A43500B4E60E = {
 			isa = PBXGroup;
 			children = (
-				E7BAF2F72A949C9300B4E60E /* RealmJokes */,
-				E7BAF2F62A949C9300B4E60E /* Products */,
+				E7BAF3232A94A43500B4E60E /* ChuckNorisJokes */,
+				E7BAF3222A94A43500B4E60E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E7BAF2F62A949C9300B4E60E /* Products */ = {
+		E7BAF3222A94A43500B4E60E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7BAF2F52A949C9300B4E60E /* RealmJokes.app */,
+				E7BAF3212A94A43500B4E60E /* ChuckNorisJokes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E7BAF2F72A949C9300B4E60E /* RealmJokes */ = {
+		E7BAF3232A94A43500B4E60E /* ChuckNorisJokes */ = {
 			isa = PBXGroup;
 			children = (
-				E7BAF2F82A949C9300B4E60E /* AppDelegate.swift */,
-				E7BAF2FA2A949C9300B4E60E /* SceneDelegate.swift */,
-				E7BAF2FC2A949C9300B4E60E /* ViewController.swift */,
-				E7BAF2FE2A949C9300B4E60E /* Main.storyboard */,
-				E7BAF3112A94A05900B4E60E /* JokesTableViewController.swift */,
-				E7BAF3012A949C9400B4E60E /* Assets.xcassets */,
-				E7BAF3032A949C9400B4E60E /* LaunchScreen.storyboard */,
-				E7BAF3062A949C9400B4E60E /* Info.plist */,
+				E7BAF3242A94A43500B4E60E /* AppDelegate.swift */,
+				E7BAF3262A94A43500B4E60E /* SceneDelegate.swift */,
+				E7BAF3382A94A64D00B4E60E /* NetworkService.swift */,
+				E7BAF3282A94A43500B4E60E /* ViewController.swift */,
+				E73ACF7A2A9600050038E3FF /* JokesTableViewCell.swift */,
+				E73ACF762A95FB1B0038E3FF /* RealmService.swift */,
+				E7BAF32A2A94A43500B4E60E /* Main.storyboard */,
+				E7BAF32D2A94A43700B4E60E /* Assets.xcassets */,
+				E7BAF32F2A94A43700B4E60E /* LaunchScreen.storyboard */,
+				E7BAF3322A94A43700B4E60E /* Info.plist */,
 			);
-			path = RealmJokes;
+			path = ChuckNorisJokes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E7BAF2F42A949C9300B4E60E /* RealmJokes */ = {
+		E7BAF3202A94A43500B4E60E /* ChuckNorisJokes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7BAF3092A949C9400B4E60E /* Build configuration list for PBXNativeTarget "RealmJokes" */;
+			buildConfigurationList = E7BAF3352A94A43700B4E60E /* Build configuration list for PBXNativeTarget "ChuckNorisJokes" */;
 			buildPhases = (
-				E7BAF2F12A949C9300B4E60E /* Sources */,
-				E7BAF2F22A949C9300B4E60E /* Frameworks */,
-				E7BAF2F32A949C9300B4E60E /* Resources */,
+				E7BAF31D2A94A43500B4E60E /* Sources */,
+				E7BAF31E2A94A43500B4E60E /* Frameworks */,
+				E7BAF31F2A94A43500B4E60E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RealmJokes;
+			name = ChuckNorisJokes;
 			packageProductDependencies = (
-				E7BAF3142A94A16500B4E60E /* Realm */,
-				E7BAF3162A94A16500B4E60E /* RealmSwift */,
+				E73ACF6E2A95FA4F0038E3FF /* Realm */,
+				E73ACF702A95FA4F0038E3FF /* RealmSwift */,
 			);
-			productName = RealmJokes;
-			productReference = E7BAF2F52A949C9300B4E60E /* RealmJokes.app */;
+			productName = ChuckNorisJokes;
+			productReference = E7BAF3212A94A43500B4E60E /* ChuckNorisJokes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E7BAF2ED2A949C9300B4E60E /* Project object */ = {
+		E7BAF3192A94A43500B4E60E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					E7BAF2F42A949C9300B4E60E = {
+					E7BAF3202A94A43500B4E60E = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = E7BAF2F02A949C9300B4E60E /* Build configuration list for PBXProject "RealmJokes" */;
+			buildConfigurationList = E7BAF31C2A94A43500B4E60E /* Build configuration list for PBXProject "ChuckNorisJokes" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,59 +127,61 @@
 				en,
 				Base,
 			);
-			mainGroup = E7BAF2EC2A949C9300B4E60E;
+			mainGroup = E7BAF3182A94A43500B4E60E;
 			packageReferences = (
-				E7BAF3132A94A16500B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				E73ACF6D2A95FA4F0038E3FF /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
-			productRefGroup = E7BAF2F62A949C9300B4E60E /* Products */;
+			productRefGroup = E7BAF3222A94A43500B4E60E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E7BAF2F42A949C9300B4E60E /* RealmJokes */,
+				E7BAF3202A94A43500B4E60E /* ChuckNorisJokes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E7BAF2F32A949C9300B4E60E /* Resources */ = {
+		E7BAF31F2A94A43500B4E60E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7BAF3052A949C9400B4E60E /* LaunchScreen.storyboard in Resources */,
-				E7BAF3022A949C9400B4E60E /* Assets.xcassets in Resources */,
-				E7BAF3002A949C9300B4E60E /* Main.storyboard in Resources */,
+				E7BAF3312A94A43700B4E60E /* LaunchScreen.storyboard in Resources */,
+				E7BAF32E2A94A43700B4E60E /* Assets.xcassets in Resources */,
+				E7BAF32C2A94A43500B4E60E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E7BAF2F12A949C9300B4E60E /* Sources */ = {
+		E7BAF31D2A94A43500B4E60E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7BAF3122A94A05900B4E60E /* JokesTableViewController.swift in Sources */,
-				E7BAF2FD2A949C9300B4E60E /* ViewController.swift in Sources */,
-				E7BAF2F92A949C9300B4E60E /* AppDelegate.swift in Sources */,
-				E7BAF2FB2A949C9300B4E60E /* SceneDelegate.swift in Sources */,
+				E7BAF3292A94A43500B4E60E /* ViewController.swift in Sources */,
+				E7BAF3252A94A43500B4E60E /* AppDelegate.swift in Sources */,
+				E73ACF7B2A9600050038E3FF /* JokesTableViewCell.swift in Sources */,
+				E7BAF3392A94A64D00B4E60E /* NetworkService.swift in Sources */,
+				E7BAF3272A94A43500B4E60E /* SceneDelegate.swift in Sources */,
+				E73ACF772A95FB1B0038E3FF /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E7BAF2FE2A949C9300B4E60E /* Main.storyboard */ = {
+		E7BAF32A2A94A43500B4E60E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E7BAF2FF2A949C9300B4E60E /* Base */,
+				E7BAF32B2A94A43500B4E60E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E7BAF3032A949C9400B4E60E /* LaunchScreen.storyboard */ = {
+		E7BAF32F2A94A43700B4E60E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E7BAF3042A949C9400B4E60E /* Base */,
+				E7BAF3302A94A43700B4E60E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -181,7 +189,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E7BAF3072A949C9400B4E60E /* Debug */ = {
+		E7BAF3332A94A43700B4E60E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		E7BAF3082A949C9400B4E60E /* Release */ = {
+		E7BAF3342A94A43700B4E60E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -295,7 +303,7 @@
 			};
 			name = Release;
 		};
-		E7BAF30A2A949C9400B4E60E /* Debug */ = {
+		E7BAF3362A94A43700B4E60E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -304,7 +312,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5WGN6BU5T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RealmJokes/Info.plist;
+				INFOPLIST_FILE = ChuckNorisJokes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "HW-NETOLOGY.RealmJokes";
+				PRODUCT_BUNDLE_IDENTIFIER = "HW-NETOLOGY.ChuckNorisJokes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,7 +331,7 @@
 			};
 			name = Debug;
 		};
-		E7BAF30B2A949C9400B4E60E /* Release */ = {
+		E7BAF3372A94A43700B4E60E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -332,7 +340,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5WGN6BU5T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RealmJokes/Info.plist;
+				INFOPLIST_FILE = ChuckNorisJokes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -343,7 +351,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "HW-NETOLOGY.RealmJokes";
+				PRODUCT_BUNDLE_IDENTIFIER = "HW-NETOLOGY.ChuckNorisJokes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,20 +362,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E7BAF2F02A949C9300B4E60E /* Build configuration list for PBXProject "RealmJokes" */ = {
+		E7BAF31C2A94A43500B4E60E /* Build configuration list for PBXProject "ChuckNorisJokes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7BAF3072A949C9400B4E60E /* Debug */,
-				E7BAF3082A949C9400B4E60E /* Release */,
+				E7BAF3332A94A43700B4E60E /* Debug */,
+				E7BAF3342A94A43700B4E60E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7BAF3092A949C9400B4E60E /* Build configuration list for PBXNativeTarget "RealmJokes" */ = {
+		E7BAF3352A94A43700B4E60E /* Build configuration list for PBXNativeTarget "ChuckNorisJokes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7BAF30A2A949C9400B4E60E /* Debug */,
-				E7BAF30B2A949C9400B4E60E /* Release */,
+				E7BAF3362A94A43700B4E60E /* Debug */,
+				E7BAF3372A94A43700B4E60E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -375,7 +383,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E7BAF3132A94A16500B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		E73ACF6D2A95FA4F0038E3FF /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -386,17 +394,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E7BAF3142A94A16500B4E60E /* Realm */ = {
+		E73ACF6E2A95FA4F0038E3FF /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E7BAF3132A94A16500B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = E73ACF6D2A95FA4F0038E3FF /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		E7BAF3162A94A16500B4E60E /* RealmSwift */ = {
+		E73ACF702A95FA4F0038E3FF /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E7BAF3132A94A16500B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = E73ACF6D2A95FA4F0038E3FF /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = E7BAF2ED2A949C9300B4E60E /* Project object */;
+	rootObject = E7BAF3192A94A43500B4E60E /* Project object */;
 }
