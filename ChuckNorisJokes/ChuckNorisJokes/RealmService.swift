@@ -7,7 +7,7 @@
 
 import Foundation
 import RealmSwift
-import Alamofire
+
 
 
 class JokeModel: Object  {
