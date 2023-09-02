@@ -1,13 +1,13 @@
 //
-//  JokesTableViewCell.swift
+//  ChuckNorrisCategoriesTableViewCell.swift
 //  ChuckNorisJokes
 //
-//  Created by Адхам Тангиров on 23.08.2023.
+//  Created by Адхам Тангиров on 28.08.2023.
 //
 
 import UIKit
 
-class JokesTableViewCell: UITableViewCell {
+class ChuckNorrisCategoriesTableViewCell: UITableViewCell {
     
     private lazy var title: UILabel = {
         let title = UILabel()
@@ -33,7 +33,18 @@ class JokesTableViewCell: UITableViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("somthing went wrong")
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+       
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
     private func setupConstraints() {
@@ -50,15 +61,5 @@ class JokesTableViewCell: UITableViewCell {
             self.subtitleText.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 16),
         ])
     }
-    
-  
-  
-    func configure(title: String, subtitleText: String) {
-        self.title.text = title
-        self.subtitleText.text = subtitleText
-        
-    }
-
-   
 
 }

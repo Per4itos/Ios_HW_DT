@@ -8,7 +8,9 @@
 import Foundation
 import RealmSwift
 
-
+class JokeCategoryModel: Object {
+    @objc dynamic var category: String = ""
+}
 
 class JokeModel: Object  {
     
@@ -21,6 +23,17 @@ class JokeModel: Object  {
 final class RealmService {
     
     let realm = try! Realm()
+    
+    func createJokesCategory(category: String) {
+        let categoryJokes = JokeCategoryModel()
+        
+        categoryJokes.category = category
+        
+        try! realm.write{
+            realm.add(categoryJokes)
+        }
+        
+    }
     
     func createJoke(icon_url: String,id: String ,value: String, date: String) {
         
@@ -38,14 +51,11 @@ final class RealmService {
     }
     func deleteJoke(id: String ) {
         
-        let newJoke = JokeModel()
-        
-        newJoke.id = id
-    
-        try! realm.write {
-            realm.delete(newJoke)
+        guard let deletJoke = realm.objects(JokeModel.self).filter("id == %@", id).first else {
+            return
         }
-        
-        
+            try! realm.write {
+                realm.delete(deletJoke)
+            }
     }
 }

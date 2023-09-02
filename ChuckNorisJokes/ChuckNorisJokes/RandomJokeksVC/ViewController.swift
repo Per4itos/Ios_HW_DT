@@ -10,6 +10,13 @@ import RealmSwift
 
 class ViewController: UIViewController {
     
+    let jokesTableViewCell = JokesTableViewCell()
+    let realmService = RealmService()
+    let networkService = NetworkService()
+    
+    var jokesArray: [JokeModel] = []
+    
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .white
@@ -20,14 +27,9 @@ class ViewController: UIViewController {
         return tableView
     }()
     
-    let jokesTableViewCell = JokesTableViewCell()
-    let realmService = RealmService()
-    let networkService = NetworkService()
-    
-    var jokesArray: [JokeModel] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Random Jokes"
         setupView()
         setupJockesArray()
     }
@@ -53,23 +55,10 @@ class ViewController: UIViewController {
         
         let newJokes = allJokes.filter { joke in //фильтруем
             !self.jokesArray.contains(where: { $0.id == joke.id })
-       
+            
         }
         jokesArray.append(contentsOf: newJokes) // Добавляем новые объекты в массив jokesArray
         tableView.reloadData() // Обновляем таблицу
-    }
-    
-    func deletJokeInArray() {
-        
-        let realm = try! Realm()
-        
-        let allJokes = Array(realm.objects(JokeModel.self))
-        
-        let deletJoke = allJokes.filter { joke in
-            !self.jokesArray.contains(where: { $0.id == joke.id})
-        }
-        jokesArray.remove(at: 0)
-        tableView.reloadData()
     }
     
     func getCurrentTime() -> String {  //получаем текущее время нужного формата
@@ -95,11 +84,13 @@ class ViewController: UIViewController {
                 self.setupJockesArray() // запускаем функцию добавления шутки во временный массив
                 self.jokesArray.sort(by: { $0.date > $1.date})
                 tableView.reloadData()
+                NotificationCenter.default.post(name: Notification.Name("reloadJoke"), object: nil)
             }
-                
+            
         }
         
     }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -115,11 +106,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let jokes = jokesArray[indexPath.row]
 //        cell.textLabel?.text = jokes.value
 //        cell.detailTextLabel?.text = jokes.date
-        cell.configure(title: jokes.value, subtitleText: jokes.date)
+        cell.configure(title: jokes.value, subtitleText: jokes.date, id: jokes.id)
         
         return cell
         
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -127,23 +119,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        let getTime = self.getCurrentTime()
-        
         if editingStyle == .delete {
-            networkService.deletRandomJoke { joke in
-                DispatchQueue.main.async {
-            self.realmService.deleteJoke(id: joke?.id ?? "")
-                }
-            }
-            tableView.beginUpdates()
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
-            tableView.endUpdates()
-       
+            
+            let cell = tableView.cellForRow(at: indexPath) as! JokesTableViewCell
+            let id = cell.id
+            
+            realmService.deleteJoke(id: id)
+            
         }
-        DispatchQueue.main.async {
-            self.deletJokeInArray()
-        tableView.reloadData()
+        
+        self.jokesArray = [JokeModel]()
+        tableView.beginUpdates()
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
+        tableView.endUpdates()
+        
+        DispatchQueue.main.async{
+            self.setupJockesArray() 
         }
     }
 }

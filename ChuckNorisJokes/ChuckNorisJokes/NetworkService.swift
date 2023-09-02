@@ -17,6 +17,9 @@ struct Joke: Decodable  {
     var id: String
     var value: String
 }
+struct ChuckNorrisCategories: Decodable {
+    var categories: String
+}
 
 
 class NetworkService {
@@ -36,7 +39,7 @@ class NetworkService {
             
             let code = (response as? HTTPURLResponse)?.statusCode
             if code != 200 {
-                print("Status code \(String(describing: code))")
+                //                print("Status code \(String(describing: code))")
                 complition(nil)
                 
                 return
@@ -53,7 +56,7 @@ class NetworkService {
                                                       from: data)
                 complition(answer) //получаем если нет ошибок
             }catch  {
-                print(error.localizedDescription)
+                //                print(error.localizedDescription)
                 complition(nil)
                 
             }
@@ -61,15 +64,47 @@ class NetworkService {
         task.resume()
     }
     
-    func deletRandomJoke(complition: @escaping (_ joke: Joke?)-> ()) { // делаем запрос в сеть и захватываем(эскейпинг) шутку
+    func fetchCategories(completion: @escaping (ChuckNorrisCategories?) -> Void) {
+        let session = URLSession(configuration: .default)
+        let url = URL(string: "https://api.chucknorris.io/jokes/categories")!
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil)
+                return
+            }
+            
+            guard let data = data else {
+                print("Data is nil")
+                completion(nil)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Invalid response")
+                completion(nil)
+                return
+            }
+            
+            guard httpResponse.statusCode == 200 else {
+                print("Invalid status code: \(httpResponse.statusCode)")
+                completion(nil)
+                return
+            }
+            
+            do {
+                let categories = try JSONDecoder().decode(ChuckNorrisCategories.self, from: data)
+                completion(categories)
+            } catch {
+                print("Error decoding categories: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
         
-        
-        
+        task.resume()
     }
     
-    
 }
-
 
 
 

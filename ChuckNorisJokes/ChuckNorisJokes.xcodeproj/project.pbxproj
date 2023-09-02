@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70049102A9C95C200CA0825 /* SorterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700490F2A9C95C200CA0825 /* SorterListVC.swift */; };
+		E70049122A9C980300CA0825 /* SortedDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70049112A9C980300CA0825 /* SortedDataVC.swift */; };
+		E70049172A9C994E00CA0825 /* SortedJokesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70049162A9C994E00CA0825 /* SortedJokesTableViewCell.swift */; };
+		E70049192A9C995C00CA0825 /* SortedDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70049182A9C995C00CA0825 /* SortedDataCell.swift */; };
 		E73ACF6F2A95FA4F0038E3FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E73ACF6E2A95FA4F0038E3FF /* Realm */; };
 		E73ACF712A95FA4F0038E3FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E73ACF702A95FA4F0038E3FF /* RealmSwift */; };
 		E73ACF772A95FB1B0038E3FF /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73ACF762A95FB1B0038E3FF /* RealmService.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E700490F2A9C95C200CA0825 /* SorterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorterListVC.swift; sourceTree = "<group>"; };
+		E70049112A9C980300CA0825 /* SortedDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedDataVC.swift; sourceTree = "<group>"; };
+		E70049162A9C994E00CA0825 /* SortedJokesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedJokesTableViewCell.swift; sourceTree = "<group>"; };
+		E70049182A9C995C00CA0825 /* SortedDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedDataCell.swift; sourceTree = "<group>"; };
 		E73ACF762A95FB1B0038E3FF /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		E73ACF7A2A9600050038E3FF /* JokesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesTableViewCell.swift; sourceTree = "<group>"; };
 		E7BAF3212A94A43500B4E60E /* ChuckNorisJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorisJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +55,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70049132A9C98A600CA0825 /* RandomJokeksVC */ = {
+			isa = PBXGroup;
+			children = (
+				E7BAF3282A94A43500B4E60E /* ViewController.swift */,
+				E73ACF7A2A9600050038E3FF /* JokesTableViewCell.swift */,
+			);
+			path = RandomJokeksVC;
+			sourceTree = "<group>";
+		};
+		E70049142A9C98AF00CA0825 /* SortedVCJokes */ = {
+			isa = PBXGroup;
+			children = (
+				E700490F2A9C95C200CA0825 /* SorterListVC.swift */,
+				E70049162A9C994E00CA0825 /* SortedJokesTableViewCell.swift */,
+			);
+			path = SortedVCJokes;
+			sourceTree = "<group>";
+		};
+		E70049152A9C98B500CA0825 /* SortedData */ = {
+			isa = PBXGroup;
+			children = (
+				E70049112A9C980300CA0825 /* SortedDataVC.swift */,
+				E70049182A9C995C00CA0825 /* SortedDataCell.swift */,
+			);
+			path = SortedData;
+			sourceTree = "<group>";
+		};
 		E7BAF3182A94A43500B4E60E = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +104,10 @@
 				E7BAF3242A94A43500B4E60E /* AppDelegate.swift */,
 				E7BAF3262A94A43500B4E60E /* SceneDelegate.swift */,
 				E7BAF3382A94A64D00B4E60E /* NetworkService.swift */,
-				E7BAF3282A94A43500B4E60E /* ViewController.swift */,
-				E73ACF7A2A9600050038E3FF /* JokesTableViewCell.swift */,
 				E73ACF762A95FB1B0038E3FF /* RealmService.swift */,
+				E70049142A9C98AF00CA0825 /* SortedVCJokes */,
+				E70049152A9C98B500CA0825 /* SortedData */,
+				E70049132A9C98A600CA0825 /* RandomJokeksVC */,
 				E7BAF32A2A94A43500B4E60E /* Main.storyboard */,
 				E7BAF32D2A94A43700B4E60E /* Assets.xcassets */,
 				E7BAF32F2A94A43700B4E60E /* LaunchScreen.storyboard */,
@@ -159,9 +195,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BAF3292A94A43500B4E60E /* ViewController.swift in Sources */,
+				E70049192A9C995C00CA0825 /* SortedDataCell.swift in Sources */,
 				E7BAF3252A94A43500B4E60E /* AppDelegate.swift in Sources */,
 				E73ACF7B2A9600050038E3FF /* JokesTableViewCell.swift in Sources */,
+				E70049122A9C980300CA0825 /* SortedDataVC.swift in Sources */,
 				E7BAF3392A94A64D00B4E60E /* NetworkService.swift in Sources */,
+				E70049102A9C95C200CA0825 /* SorterListVC.swift in Sources */,
+				E70049172A9C994E00CA0825 /* SortedJokesTableViewCell.swift in Sources */,
 				E7BAF3272A94A43500B4E60E /* SceneDelegate.swift in Sources */,
 				E73ACF772A95FB1B0038E3FF /* RealmService.swift in Sources */,
 			);
